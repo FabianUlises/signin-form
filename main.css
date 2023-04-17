@@ -1,5 +1,6 @@
 :root {
     --surface-400: hsl(210 25% 18%);
+    --surface-300: hsl(210 20% 15%);
     --text-100:  hsl(210 25% 96%);
     --form-valid: aqua;
 }
@@ -21,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background: hsl(210 20% 15%);
+    background: var(--surface-300);
     padding: 1rem;
     border-radius: 4px;
 }
@@ -30,7 +31,7 @@ body {
 }
 .form-input {
     inline-size: 100%;
-    background:hsl(210 25% 18%);
+    background: var(--surface-400);
     color: inherit;
     font-size: 16px;
     outline: none;
@@ -39,7 +40,6 @@ body {
     padding: .8rem .4rem;
 }
 .form-input:focus {
-    /* border-color: hsl(210 15% 85%); */
 }
 .form__group span {
     position: absolute;
@@ -53,7 +53,7 @@ body {
 .form-input:valid ~ span,
 .form-input:focus ~ span {
     transform: translateX(10px) translateY(-5px);
-    background: hsl(210 25% 18%);
+    background: var(--surface-400);
     color: var(--form-valid);
     font-size: .5rem;
     letter-spacing: .125rem;
@@ -62,4 +62,20 @@ body {
 .form-input:valid,
 .form-input:focus{
     border-color: var(--form-valid);
+}
+.form button {
+    background: var(--surface-400);
+    border: none;
+    padding: .4rem;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 25ms ease;
+}
+.form button:hover {
+    background: hsl(210 15% 30%);
+}
+.form button:active {
+    transform: scale(1.025);
+    /* color: var(--form-valid); */
 }
