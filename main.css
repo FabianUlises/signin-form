@@ -1,3 +1,7 @@
+:root {
+    --surface-400: hsl(210 25% 18%);
+    --text-100:  hsl(210 25% 96%);
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +12,28 @@ body {
     justify-content: center;
     align-items: center;
     block-size: 100vh;
-    background: hsl(210 25% 18%);
-    color: hsl(210 25% 96%);
+    background: var(--surface-400);
+    color:var(--text-100);
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: hsl(210 20% 15%);
+    padding: 1rem;
+    border-radius: 4px;
+}
+.form__group {
+    position: relative;
+}
+.form-input {
+    background:hsl(210 25% 18%);
+    color: inherit;
+    outline: none;
+    border: .5px solid hsl(210 15% 60%);
+    border-radius: 2px;
+    padding: .4rem .8rem;
+}
+.form-input:focus {
+    border-color: hsl(210 15% 85%);
 }
