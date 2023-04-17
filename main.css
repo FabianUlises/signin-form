@@ -39,3 +39,11 @@ body {
 .form-input:focus {
     border-color: hsl(210 15% 85%);
 }
+.form__group span {
+    position: absolute;
+    top: 0;
+    padding: 1rem .4rem;
+    font-size: 13px;;
+    text-transform: uppercase;
+    
+}
