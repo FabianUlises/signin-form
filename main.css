@@ -1,6 +1,7 @@
 :root {
     --surface-400: hsl(210 25% 18%);
     --text-100:  hsl(210 25% 96%);
+    --form-valid: aqua;
 }
 * {
     margin: 0;
@@ -38,7 +39,7 @@ body {
     padding: .8rem .4rem;
 }
 .form-input:focus {
-    border-color: hsl(210 15% 85%);
+    /* border-color: hsl(210 15% 85%); */
 }
 .form__group span {
     position: absolute;
@@ -46,5 +47,19 @@ body {
     padding: 1rem .4rem;
     font-size: 13px;;
     text-transform: uppercase;
-    
+    pointer-events: none;
+    transition: all 50ms ease;
+}
+.form-input:valid ~ span,
+.form-input:focus ~ span {
+    transform: translateX(10px) translateY(-5px);
+    background: hsl(210 25% 18%);
+    color: var(--form-valid);
+    font-size: .5rem;
+    letter-spacing: .125rem;
+    padding: .2rem .4rem;
+}
+.form-input:valid,
+.form-input:focus{
+    border-color: var(--form-valid);
 }
