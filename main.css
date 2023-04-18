@@ -60,8 +60,10 @@ body {
     letter-spacing: .125rem;
     padding: .2rem .4rem;
 }
-.form-input:valid,
 .form-input:focus{
+    border-color: whitesmoke;
+}
+.form-input:valid {
     border-color: var(--form-valid);
 }
 .form button {
