@@ -65,7 +65,8 @@ body {
     border-color: var(--form-valid);
 }
 .form button {
-    background: var(--surface-400);
+    background: hsl(210 85% 25%);
+    ;
     border: none;
     padding: .4rem;
     color: inherit;
@@ -74,9 +75,9 @@ body {
     transition: background 25ms ease;
 }
 .form button:hover {
-    background: hsl(210 15% 30%);
+    background: hsl(210 80% 22%);
 }
 .form button:active {
-    transform: scale(1.025);
+    transform: scale(.975);
     /* color: var(--form-valid); */
 }
