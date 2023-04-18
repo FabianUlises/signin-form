@@ -63,6 +63,7 @@ body {
 .form-input:focus{
     border-color: whitesmoke;
 }
+
 .form-input:valid {
     border-color: var(--form-valid);
 }
